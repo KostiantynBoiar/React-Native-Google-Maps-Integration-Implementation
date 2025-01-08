@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Alert } from 'react-native';
 
-interface Issue {
+export interface Issue {
   id: string;
   title: string;
   description: string;
@@ -16,7 +16,7 @@ interface Issue {
 }
 
 const base_url = 'http://10.0.2.2:8001';
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM2MzQ1Njk0LCJpYXQiOjE3MzYzNDIwOTQsImp0aSI6ImM5OWU5ZGI5Yzk3YzRjMDlhMWQ4ZThhMjhmOTIxZDE3IiwidXNlcl9pZCI6MX0.e876ZA3M2HwnOKllSZz9zKUOneYQ46jTYeeR3_70wyk";
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM2MzQ3OTIzLCJpYXQiOjE3MzYzNDQzMjMsImp0aSI6IjA0NzhhMWIxOGI3NjRiOTRhYjJhY2VmY2ViMWFhNzQ2IiwidXNlcl9pZCI6MX0.mpKn6PXdccmQIRSTct0pjMkqcJEkg7AvRHng-X1aR5A";
 export const useFetchIssues = (latitude: number, longitude: number, radius: number) => {
   const [issues, setIssues] = useState<Issue[]>([]);
   const [loading, setLoading] = useState<boolean>(true);

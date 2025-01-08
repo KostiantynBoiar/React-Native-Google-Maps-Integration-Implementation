@@ -2,20 +2,7 @@ import React from 'react';
 import { View, Image, StyleSheet, Text } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import { useFetchIssues } from '../fetch/fetchIssues';
-
-interface Issue {
-  id: string;
-  title: string;
-  description: string;
-  location: string; // 'location' is already an object, no need for JSON.parse
-  status: string;
-  category: number;
-  created_at: string;
-  updated_at: string;
-  citizen: number;
-  images: any[];
-  distance: number;
-}
+import { Issue } from '../fetch/fetchIssues';
 
 interface GoogleMapComponentProps {
   initialRegion: {
