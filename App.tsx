@@ -5,9 +5,15 @@ import GoogleMapComponent from './src/components/GoogleMapComponent';
 
 
 const App = () => {
+  const initialRegion = {
+    latitude: 56.476338,
+    longitude: -2.9183526,
+    latitudeDelta: 0.0922,
+    longitudeDelta: 0.0421,
+  };
 
   return (
-    <GoogleMapComponent/>
+    <GoogleMapComponent initialRegion={initialRegion} />
   );
 };
 
